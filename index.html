@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC >
+<head>
+<link rel="stylesheet"  type="text/css" href="./css/principal2.css" />
+</head>
+<body>
+
+<div id ="contenedor">
+
+  <div id = "cabecera">
+   <h1 id ="logo"> <a href ="./" title="Mi sitio web"> Mi sitio Web </a></h1>
+  </div>
+
+<div id="menu">
+<ul>
+<li id ="option2" onclick="cambiar(this.id)"> <a    href="#proc" > Procesadores</a></li>
+<li id ="option1" onclick="cambiar(this.id)" class="seleccionado"><a href="#menoria">Memoria</a></li> 
+<li id ="option3"  onclick="cambiar(this.id)" ><a href="#discos"> Discos</a></li>
+<li id ="option4"  onclick="cambiar(this.id)"><a href="#fuente"> Fuentes</a></li>
+<li id ="option5"  onclick="cambiar(this.id)" ><a href="#instalar"> Instalacion y arranque</a></li>
+<div class="clear"></div>
+</ul>
+</div>
+
+<div id ="contenido">
+<div id ="principal">
+
+<div class ="articulo">
+
+<a name = "proc">
+<h2><a href="#">Procesadores</a></h2>
+
+<p> dos lineas sobre procesadores  </p>
+
+<span class="ocultar" id ="ocultartexto">
+<p> todos los datos sobre procesadores </p>
+</span>
+<p class="btn-more"><a href="#" id ="ocultarbtn">Seguir leyendo...</a></p>
+
+</div>
+<div class="relleno"></div>
+</br> 
+
+<div class="articulo">
+<a name ="memoria">
+<h2><a href="#"> memoria</a></h2>
+<p> todo sobre memoria </p>
+
+</div>
+<br>
+<div class="articulo">
+  <a name ="discos">
+  <h2><a href="#"> discos</a></h2>
+  <p> todo sobre discos </p>
+  
+  </div>
+  
+  
+<div class="articulo">
+  <a name ="fuente">
+  <h2><a href="#"> fuente
+  </a></h2>
+  <p> todo sobre fuente </p>
+  
+  </div>
+
+  <div class="articulo">
+    <a name ="instalar">
+    <h2><a href="#"> instalar    </a></h2>
+    <p> todo sobre instalar </p>
+    
+    </div>
+
+</div> <!--principal-->
+
+
+<div id="secundario">
+<h3>Enlaces</h3>
+<ul id="enlaces">
+<li><a href="misitioweb.html">Procesador</a></li>
+<li><a href="Memoria.html">memorias</a></li>
+<li><a href="#">Enlace 3</a></li>
+<li><a href="#">Enlace 4</a></li>
+<li><a href="#">Enlace 5</a></li>
+</ul>
+<div class="clear"></div>
+
+</div>
+
+
+</div><!--contenido-->
+ 
+<script>
+function cambiar(str) {
+var boton = document.getElementById(str);
+     boton.className=""; boton.className = "seleccionado";
+if (str=="option2"){
+boton = document.getElementById("option1"); boton.className="";
+boton = document.getElementById("option3"); boton.className="";
+boton = document.getElementById("option4");boton.className="";
+boton = document.getElementById("option5");boton.className="";
+}
+if (str=="option1"){
+boton = document.getElementById("option2");boton.className="";
+boton = document.getElementById("option3");boton.className="";
+boton = document.getElementById("option4");boton.className="";
+boton = document.getElementById("option5");boton.className="";
+}
+if (str=="option3"){
+boton = document.getElementById("option2");boton.className="";
+boton = document.getElementById("option1");boton.className="";
+boton = document.getElementById("option4");boton.className="";
+boton = document.getElementById("option5");boton.className="";
+}
+if (str=="option4"){
+boton = document.getElementById("option2");boton.className="";
+boton = document.getElementById("option3");boton.className="";
+boton = document.getElementById("option1");boton.className="";
+boton = document.getElementById("option5");boton.className="";
+}
+if (str=="option5"){
+boton = document.getElementById("option2");boton.className="";
+boton = document.getElementById("option3");boton.className="";
+boton = document.getElementById("option4");boton.className="";
+boton = document.getElementById("option1");boton.className="";
+}
+}
+
+
+let ocultartexto_btn = document.getElementById("ocultarbtn");
+let ocultartexto = document.getElementById("ocultartexto");
+ocultartexto_btn.addEventListener('click', toggleText);
+
+function toggleText() {
+ocultartexto.classList.toggle('mostrar'); 
+if (ocultartexto.classList.contains('mostrar')) 
+{
+ocultartexto_btn.innerHTML='Leer menos';
+} else {
+
+ocultartexto_btn.innerHTML='Leer mas';
+}}
+
+
+  </script>
+</body>
+</html>
